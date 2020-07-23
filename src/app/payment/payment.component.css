@@ -1,0 +1,108 @@
+body {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.header{
+  color: #1d34b9;
+  font-family: 'Baloo Da 2', cursive;
+  padding: 20px;
+}
+
+.container-checkbox {
+  background-color: cornflowerblue;
+  width: 100%;
+  /*height: 56px;*/
+  min-height: 56px;
+  height: auto;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.container-checkbox-2 {
+  background-color: cornflowerblue;
+  width: 75%;
+  height: 56px;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.container-data {
+   background-color: lightgrey;
+   width: 100%;
+   /*height: 56px;*/
+  min-height: 56px;
+  height: auto;
+   color: #1d34b9;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+.container-data-2 {
+  background-color: lightgrey;
+  width: 75%;
+  height: auto;
+  color: #1d34b9;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.col-card {
+  height: auto;
+  width: 450px;
+}
+
+.body-payment {
+  padding: 20px;
+
+}
+
+.total-pay{
+  width: 100%;
+  height: 140px;
+  padding-right: 20px;
+  color: #1d34b9;
+}
+
+.total-pay h2 {
+  margin-bottom: 1px;
+  margin-top: 0px;
+}
+
+.total-pay h4 {
+  margin-top: 1px;
+}
+
+.drop-down {
+  width: 100% !important;
+}
+
+.drk-gry-text {
+  color: black;
+  opacity: 0.5;
+}
+
+.submit-payment {
+  padding: 30px;
+}
+
+.single-image-container {
+  padding-left: 10px;
+  width: 80px;
+  height: 59.5px;
+}
+.single-card{
+  width: 60px;
+  padding: 11px 5px 0px 5px;
+  height: 34px;
+  opacity: 0.25;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white;
+  border-radius: 5px;
+}

@@ -5,61 +5,109 @@
   <h1 style="margin-bottom: 10px">Make A Payment</h1>
   <h2>Determine Amount</h2>
 </div>
+<div class="bar-line" fxLayout="center center"></div>
 
 <div class="body-payment" fxLayout="column">
   <div class="container-checkbox" fxLayoutAlign="start center">
     <mat-radio-button color="primary"> Pay on Account</mat-radio-button>
   </div>
-  <div class="container-data" style="border-bottom: solid 1px gray" fxLayout="row" fxLayoutAlign="space-between center">
-    <h5>ACCOUNT NUMBER</h5>
-    <h5 style="visibility: hidden">TERM DATES</h5>
-    <h5>BALANCE</h5>
-    <h5>AMOUNT DUE</h5>
-    <h5>PAYMENT AMOUNT</h5>
-  </div>
-  <div class="container-data" fxLayout="row" fxLayoutAlign="space-between center">
-    <span>
-      <mat-icon>monetization_on</mat-icon>
-      <span class="drk-gry-text" style="padding: 10px">{{acctNumber}}</span>
+  <div class="container-data" fxLayoutAlign="space-between center" fxLayout="row">
+    <div class="box-contain" fxLayout="column">
+      <h5 style="margin: 5px 0px 26px 0px;">ACCOUNT NUMBER</h5>
+      <span fxLayout="row" class="format-box-contain">
+        <div >
+          <mat-icon>monetization_on</mat-icon>
+        </div>
+        <div>
+          <span class="drk-gry-text" style="padding: 3px 8px 3px 8px; position: absolute">{{this.data.acctNumber}}</span>
+        </div>
+      </span>
+    </div>
+    <div class="box-contain" fxLayout="column">
+      <h5 style="margin: 0px 0px 30px 0px;">TERM DATES</h5>
+      <span class="format-box-contain drk-gry-text">{{this.data.balNum}}</span>
+    </div>
+
+    <div class="box-contain" fxLayout="column">
+      <h5 style="margin: 0px 0px 30px 0px">BALANCE</h5>
+      <span class="format-box-contain drk-gry-text">{{this.data.balNum | currency}}</span>
+    </div>
+
+    <div class="box-contain" fxLayout="column">
+      <h5 style="margin: 0px 0px 30px 0px">AMOUNT DUE</h5>
+      <span class="format-box-contain drk-gry-text">{{this.data.balNum | currency}}</span>
+    </div>
+
+    <div class="box-contain" style="width: auto !important;" fxLayout="column">
+      <h5 style="margin: 10px 0px 20px 0px;">PAYMENT AMOUNT</h5>
+      <span class="field-format-small">
+        <form >
+          <mat-form-field appearance="outline">
+            <mat-label class="drk-gry-text">{{this.data.balNum | currency}}</mat-label>
+            <input matInput placeholder="Enter Number Here">
+          </mat-form-field>
+        </form>
     </span>
-    <span class="drk-gry-text">{{balNum}}</span>
-    <span class="drk-gry-text">{{balNum | currency}}</span>
-    <span class="drk-gry-text">{{balNum | currency}}</span>
-    <span>
-      <input type="text">
-    </span>
+      <!--      <span class="drk-gry-text">{{this.data.balNum | currency}}</span>-->
+    </div>
   </div>
+
+
+<!--  <div class="container-data" fxLayout="row" fxLayoutAlign="space-between center">-->
+
+<!--  </div>-->
 
   <div class="container-checkbox" fxLayoutAlign="start center">
     <mat-radio-button color="primary">Pay on Individual Policies</mat-radio-button>
   </div>
   <div class="container-data" style="border-bottom: solid 1px gray" fxLayout="row" fxLayoutAlign="space-between center">
-    <h5>POLICY NUMBER&nbsp;&nbsp;&nbsp;</h5>
-    <h5>TERM DATES</h5>
-    <h5>BALANCE</h5>
-    <h5>AMOUNT DUE</h5>
-    <h5>PAYMENT AMOUNT</h5>
-  </div>
-
-  <div class="container-data" fxLayoutAlign="space-between center">
-    <div>
-      <mat-icon style="padding-top: 5px">directions_car</mat-icon>
-      <span class="drk-gry-text">{{policyNum}}</span>
+    <div class="box-contain" fxLayout="column">
+      <h5 style="margin: 5px 0px 26px 0px;">POLICY NUMBER&nbsp;&nbsp;&nbsp;</h5>
+      <span fxLayout="row" class="format-box-contain">
+        <div >
+          <mat-icon style="padding-bottom: 5px">directions_car</mat-icon>
+        </div>
+        <div>
+          <span class="drk-gry-text" style="padding: 3px 8px 3px 8px; position: absolute">{{this.data.acctNumber}}</span>
+        </div>
+      </span>
     </div>
-    <span class="drk-gry-text">{{termDates}}</span>
-    <span class="drk-gry-text">{{balNum | currency}}</span>
-    <span class="drk-gry-text">{{balNum | currency}}</span>
-    <span>
-      <input type="text">
+    <div class="box-contain" fxLayout="column">
+      <h5 style="margin: 0px 0px 30px 0px;">TERM DATES</h5>
+      <span class="format-box-contain drk-gry-text">{{this.data.balNum | currency}}</span>
+    </div>
+
+    <div class="box-contain" fxLayout="column">
+      <h5 style="margin: 0px 0px 30px 0px">BALANCE</h5>
+      <span class="format-box-contain drk-gry-text">{{this.data.balNum | currency}}</span>
+    </div>
+
+    <div class="box-contain" fxLayout="column">
+      <h5 style="margin: 0px 0px 30px 0px">AMOUNT DUE</h5>
+      <span class="format-box-contain drk-gry-text">{{this.data.balNum | currency}}</span>
+    </div>
+
+    <div class="box-contain" style="width: auto !important;" fxLayout="column">
+      <h5 style="margin: 10px 0px 20px 0px;">PAYMENT AMOUNT</h5>
+      <span class="field-format-small">
+        <form >
+          <mat-form-field appearance="outline">
+            <mat-label class="drk-gry-text">{{this.data.balNum | currency}}</mat-label>
+            <input matInput placeholder="Enter Number Here">
+          </mat-form-field>
+        </form>
     </span>
+      <!--      <span class="drk-gry-text">{{this.data.balNum | currency}}</span>-->
+    </div>
   </div>
+  <div class="bar-line-2"></div>
+
 
   <div class="total-pay" fxLayoutAlign="end center" fxLayout="row">
     <h2>Total Payment</h2>
-    <span style="padding-left: 148px; padding-right: 20px">
-      {{balNum | currency}}
+    <span class="drk-gry-text" style="padding-left: 148px; padding-right: 20px">
+      {{this.data.balNum | currency}}
     </span>
-
   </div>
 
   <div class="total-pay" fxLayoutAlign="start" fxLayout="column">
@@ -75,7 +123,7 @@
       <div class="col-card" fxLayout="column" >
         <mat-form-field appearance="outline" style="padding-top: 17px; width: 200px">
           <mat-label class="drk-gry-text">Payment Method</mat-label>
-          <mat-select class="drop-down" [(value)]="selected">
+          <mat-select class="drop-down" [(value)]="this.data.selected">
             <mat-option>None</mat-option>
             <mat-option value="Credit Card">Credit Card</mat-option>
             <mat-option value="PayPal">Paypal</mat-option>
@@ -85,18 +133,25 @@
 
         <div id="card-number" style="padding-top: 10px;">
           <form>
-            <mat-form-field style="width: 400px"appearance="outline">
+            <mat-form-field style="width: 420px"appearance="outline">
               <mat-label class="drk-gry-text">Credit Card Number</mat-label>
-              <input matInput placeholder="Enter Number Here">
+              <input matInput [(ngModel)]="this.data.cardNum" name="Card Number" placeholder="Enter Number Here">
             </mat-form-field>
           </form>
         </div>
 
-        <div id="exp-time">
+        <div id="exp-time" fxLayout="row">
+          <form style="padding-right: 10px">
+            <mat-form-field appearance="outline">
+              <mat-label class="drk-gry-text">Exp. Month</mat-label>
+              <input [(ngModel)]="this.data.expMonth" name="Exp. Month" matInput placeholder="Enter Number Here">
+            </mat-form-field>
+          </form>
+
           <form>
-            <mat-form-field style="width: 400px"appearance="outline">
-              <mat-label class="drk-gry-text">Credit Card Number</mat-label>
-              <input matInput placeholder="Enter Number Here">
+            <mat-form-field appearance="outline">
+              <mat-label class="drk-gry-text">Exp. Year</mat-label>
+              <input matInput [(ngModel)]="this.data.expYear" name="Exp. Year" placeholder="Enter Number Here">
             </mat-form-field>
           </form>
         </div>
@@ -104,7 +159,7 @@
       </div>
       <div class="col-card" fxLayout="column">
 <!--        <span class="card-verify">-->
-<!--          <label class="drk-gry-text" >{{selected}}</label>-->
+<!--          <label class="drk-gry-text" >{{this.data.selected}}</label>-->
 <!--          <span id="image-container">-->
 
 <!--          </span>-->
@@ -112,7 +167,7 @@
         <div style="padding-top: 15px" fxLayout="row">
           <form>
             <mat-form-field appearance="outline">
-              <mat-label class="drk-gry-text">{{selected}}</mat-label>
+              <mat-label class="drk-gry-text">{{this.data.selected}}</mat-label>
               <input matInput placeholder="Ex: 345">
             </mat-form-field>
           </form>
@@ -128,7 +183,7 @@
           <form>
             <mat-form-field appearance="outline">
               <mat-label class="drk-gry-text">Verification</mat-label>
-              <input matInput placeholder="Ex: 345">
+              <input matInput [(ngModel)]="this.data.verfNum" name="Verify Code" placeholder="Ex: 345">
             </mat-form-field>
           </form>
 
@@ -154,92 +209,100 @@
       <span>Enter Payer Information</span>
     </div>
 
-    <div class="container-data-2" fxLayout="row" fxLayoutAlign="start center">
-      <div class="col-card" fxLayout="column" >
-        <mat-form-field appearance="outline" style="padding-top: 17px; width: 200px">
-          <mat-label class="drk-gry-text">Payment Method</mat-label>
-          <mat-select class="drop-down" [(value)]="selected">
-            <mat-option>None</mat-option>
-            <mat-option value="Credit Card">Credit Card</mat-option>
-            <mat-option value="PayPal">Paypal</mat-option>
-            <mat-option value="Debit">Debit</mat-option>
-          </mat-select>
+    <div class="container-data-2 drk-gry-text" fxLayout="row" fxLayoutAlign="start center">
+      <div class="col-2-info" fxLayout="column" >
+        <mat-form-field appearance="outline" style="padding-top: 17px; width: 420px">
+          <mat-label class="drk-gry-text">First Name</mat-label>
+          <input matInput [(ngModel)]="this.data.firstName" name="First Name" placeholder="Ex: John Doe">
         </mat-form-field>
 
-        <div class="card-number" style="padding-top: 10px;">
+        <div class="field-format" style="padding-top: 10px;">
           <form>
-            <mat-form-field style="width: 400px"appearance="outline">
-              <mat-label class="drk-gry-text">Credit Card Number</mat-label>
-              <input matInput placeholder="Enter Number Here">
+            <mat-form-field appearance="outline">
+              <mat-label class="drk-gry-text">Address</mat-label>
+              <input matInput [(ngModel)]="this.data.address" name="Address" placeholder="Enter Number Here">
             </mat-form-field>
           </form>
         </div>
 
-        <div class="exp-time">
+        <div class="field-format">
+        <form>
+          <mat-form-field appearance="outline">
+            <mat-label class="drk-gry-text">City</mat-label>
+            <input [(ngModel)]="this.data.city" name="City" matInput placeholder="Ex: Salt Lake City">
+          </mat-form-field>
+        </form>
+      </div>
+
+        <div class="field-format">
           <form>
-            <mat-form-field style="width: 400px"appearance="outline">
-              <mat-label class="drk-gry-text">Credit Card Number</mat-label>
-              <input matInput placeholder="Enter Number Here">
+            <mat-form-field appearance="outline">
+              <mat-label class="drk-gry-text">Phone</mat-label>
+              <input [(ngModel)]="this.data.phone" name="Phone" matInput placeholder="Ex: 1-999-999-9999">
             </mat-form-field>
           </form>
         </div>
 
       </div>
-      <div class="col-card" fxLayout="column">
-        <!--        <span class="card-verify">-->
-        <!--          <label class="drk-gry-text" >{{selected}}</label>-->
-        <!--          <span id="image-container">-->
+      <div class="col-2-info" fxLayout="column" >
+        <mat-form-field appearance="outline" style="padding-top: 17px; width: 420px">
+          <mat-label class="drk-gry-text">Last Name</mat-label>
+          <input matInput [(ngModel)]="this.data.lastName" name="Last Name" placeholder="Ex: John Doe">
+        </mat-form-field>
 
-        <!--          </span>-->
-        <!--        </span>-->
-        <div style="padding-top: 15px" fxLayout="row">
+        <div class="field-format" style="padding-top: 10px;">
           <form>
             <mat-form-field appearance="outline">
-              <mat-label class="drk-gry-text">{{selected}}</mat-label>
-              <input matInput placeholder="Ex: 345">
-            </mat-form-field>
-          </form>
-
-          <span class="single-image-container" fxLayout="row">
-            <img class="single-card" src="/assets/Visa.png">
-            <img class="single-card" src="/assets/American-Express.png">
-            <img class="single-card" src="/assets/Mastercard.png">
-          </span>
-        </div>
-
-        <div style="padding-top: 7px" fxLayout="row">
-          <form>
-            <mat-form-field appearance="outline">
-              <mat-label class="drk-gry-text">Verification</mat-label>
-              <input matInput placeholder="Ex: 345">
-            </mat-form-field>
-          </form>
-
-          <span class="single-image-container" fxLayout="row">
-<!--            Image Here-->
-            <img class="single-card" src="/assets/Visa.png">
-            <img class="single-card" src="/assets/American-Express.png">
-            <img class="single-card" src="/assets/Mastercard.png">
-          </span>
-        </div>
-        <div style="visibility: hidden">
-          <form>
-            <mat-form-field appearance="outline">
-              <mat-label class="drk-gry-text">Verification</mat-label>
-              <input matInput placeholder="Ex: 345">
+              <mat-label class="drk-gry-text">Address 2</mat-label>
+              <input matInput [(ngModel)]="this.data.addressTwo" name="Address 2" placeholder="Ex: 1121 Oak St">
             </mat-form-field>
           </form>
         </div>
+
+        <div class="field-format-small">
+          <div fxLayout="row">
+            <form>
+              <mat-form-field appearance="outline" style="padding-right: 15px; padding-left: 0px">
+                <mat-label class="drk-gry-text">State</mat-label>
+                <input [(ngModel)]="this.data.state" name="State" matInput placeholder="Ex: UT">
+              </mat-form-field>
+            </form>
+
+            <form>
+              <mat-form-field appearance="outline" style="padding-right: 15px">
+                <mat-label class="drk-gry-text">Zip</mat-label>
+                <input [(ngModel)]="this.data.zip" name="Zip" matInput placeholder="Ex: 12345">
+              </mat-form-field>
+            </form>
+
+            <form>
+              <mat-form-field appearance="outline">
+                <mat-label class="drk-gry-text">Country</mat-label>
+                <input [(ngModel)]="this.data.country" name="Country" matInput placeholder="Ex: USA">
+              </mat-form-field>
+            </form>
+          </div>
+        </div>
+
+        <div class="field-format">
+          <form>
+            <mat-form-field appearance="outline">
+              <mat-label class="drk-gry-text">Email</mat-label>
+              <input [(ngModel)]="this.data.email" name="Email" matInput placeholder="Ex: 1-999-999-9999">
+            </mat-form-field>
+          </form>
+        </div>
+
       </div>
     </div>
 
   </ng-template>
 
-  <div class="container-data-2" *ngIf="selected === ''; else altStyle" fxLayoutAlign="start center">
+  <div class="container-data-2" *ngIf="this.data.selected === ''; else altStyle" fxLayoutAlign="start center">
     <div fxLayoutAlign="space-evenly center" >
       <mat-form-field appearance="outline" style="padding-top: 10px">
         <mat-label class="drk-gry-text">Payment Method</mat-label>
-        <mat-select class="drop-down" [(value)]="selected">
+        <mat-select class="drop-down" [(value)]="this.data.selected">
           <mat-option>None</mat-option>
           <mat-option value="Credit">Credit</mat-option>
           <mat-option value="PayPal">Paypal</mat-option>
@@ -247,11 +310,11 @@
         </mat-select>
       </mat-form-field>
 
-      <div *ngIf="selected === ''; else elseBlock">
+      <div *ngIf="this.data.selected === ''; else elseBlock">
       </div>
 
       <ng-template #elseBlock>
-        <label class="drk-gry-text">{{selected}}</label>
+        <label class="drk-gry-text">{{this.data.selected}}</label>
 
         <div fxLayout="column" fxLayoutAlign="start center">
           <form>
@@ -263,7 +326,7 @@
       </ng-template>
 
 <!--      <mat-form-field>-->
-<!--        <mat-label>{{selected}}</mat-label>-->
+<!--        <mat-label>{{this.data.selected}}</mat-label>-->
 <!--      </mat-form-field>-->
     </div>
   </div>

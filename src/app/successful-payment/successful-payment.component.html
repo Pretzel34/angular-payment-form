@@ -1,0 +1,30 @@
+<div fxLayout="column" fxLayoutAlign="start center">
+  <div class="container-data-success" style="padding-top:30px; margin-top: 100px">
+    <h1>Payment Successful</h1>
+    <h5>Thank you for your payment</h5>
+    <div fxLayout="row" fxLayoutAlign="space-evenly center">
+      <div class="cont-one" fxLayout="column">
+        <a>Payer Name</a>
+        <a>Date</a>
+        <a>Payment Method</a>
+        <a>Paid to Account Number</a>
+        <a>Total Payment Amount</a>
+        <a>Confirmation number</a>
+      </div>
+      <div class="cont-two" fxLayout="column">
+        <a>{{this.data.firstName + "" + this.data.lastName}}</a>
+        <a>Date</a>
+        <a>{{this.data.selected}} blah</a>
+        <a>{{this.data.acctNumber}} blah</a>
+        <a>{{this.data.balNum | currency}} blah</a>
+        <a>123456</a>
+      </div>
+    </div>
+    <div id="button-box" fxLayoutAlign="space-evenly center" fxLayout="">
+      <button mat-raised-button>Finish</button>
+      <button mat-raised-button color="primary">Print Confirmation</button>
+    </div>
+  </div>
+</div>
+
+

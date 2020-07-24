@@ -1,0 +1,23 @@
+.container-data-success {
+  width: 1000px;
+  height: 400px;
+  background-color: white;
+  color: gray;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.cont-one{
+  height: 200px;
+  width: 400px;
+  font-weight: bolder;
+}
+
+.cont-two{
+  height: 200px;
+  width: 400px;
+}
+
+.container-data-success h1,h5 {
+  padding-left: 66px;
+}

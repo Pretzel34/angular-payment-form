@@ -1,8 +1,43 @@
-<div class="header">
+<div class="header" fxLayout="row" fxLayoutAlign="space-evenly start">
   <h1>Payment Summary</h1>
 </div>
 
+<div class="drk-gry-text" fxLayoutAlign="center center" fxLayout="column">
+  <div class="summary-display" fxLayoutAlign="space-between end" style="border-bottom: 6px solid #1d34b9">
+    <span>
+      Account: <b>{{this.data.policyNum}}</b>
+    </span>
+    <span>
+      {{this.data.balNum | currency}}
+    </span>
+  </div>
+
+  <div class="summary-display" fxLayoutAlign="end start" >
+    <span style="padding-right:30px">
+      <b>Total Payment:</b>
+    </span>
+    <span>
+      <b>{{this.data.balNum | currency}}</b>
+    </span>
+  </div>
+</div>
+
+<div id="info-container" fxLayout="row" fxLayoutAlign="center start">
+  <div class="small-info-cont drk-gry-text">
+    <h3><b>Payment Information</b></h3>
+    <a>{{this.data.selected}}</a>
+    <a>Card ending in {{this.data.cardNum}}</a>
+  </div>
+  <div class="small-info-cont drk-gry-text" fxLayout="column">
+    <h3><b>Payer Information</b></h3>
+    <a>{{this.data.firstName + '' + this.data.lastName}}</a>
+    <a>{{this.data.address}}</a>
+    <a>{{this.data.city + ',' + this.data.state + '' + this.data.zip}}</a>
+  </div>
+</div>
+
+
 <div class="submit-payment" fxLayoutAlign="space-evenly end">
   <button mat-flat-button>Cancel</button>
-  <button mat-raised-button color="primary">Submit Payment</button>
+  <button mat-raised-button color="primary" (click)="router.navigate(['/successful']); submit()">Submit Payment</button>
 </div>

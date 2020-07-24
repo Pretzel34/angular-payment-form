@@ -15,12 +15,14 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { SummaryComponent } from './payment/summary/summary.component';
+import { SuccessfulPaymentComponent } from './successful-payment/successful-payment.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PaymentComponent,
-    SummaryComponent
+    SummaryComponent,
+    SuccessfulPaymentComponent
   ],
   imports: [
     BrowserModule,

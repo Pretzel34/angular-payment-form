@@ -87,24 +87,11 @@ export class PaymentComponent implements OnInit {
   }
 
   @Input() openDialog(){
-    // obj.action = action;
     const dialogRef = this.dialog.open(SummaryComponent, {
       width: '1000px',
       height: '500px',
       // data: obj
     });
-
-    // dialogRef.afterClosed().subscribe(result => {
-    //   if (result.event === 'Add') {
-    //     this.addRowData(result.data);
-    //   } else if (result.event === 'Update') {
-    //     this.updateRowData(result.data);
-    //   } else if (result.event === 'Delete') {
-    //     this.deleteRowData(result.data);
-    //   } else {
-    //     return null;
-    //   }
-    // });
   }
 
   onSelect() {

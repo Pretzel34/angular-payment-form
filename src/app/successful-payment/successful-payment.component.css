@@ -1,23 +1,41 @@
+.bodybg-color {
+  background-color: #1d34b9;
+}
+
 .container-data-success {
-  width: 1000px;
-  height: 400px;
+  max-width: 1000px;
+  min-height: 400px;
   background-color: white;
   color: gray;
   padding: 40px;
   border-radius: 8px;
+  padding-top: 20px;
 }
 
 .cont-one{
   height: 200px;
   width: 400px;
+  min-width: 176px;
   font-weight: bolder;
+  margin: 20px 20px 0px 0px;
 }
 
 .cont-two{
   height: 200px;
   width: 400px;
+  margin: 20px 20px 0px 0px;
 }
 
 .container-data-success h1,h5 {
-  padding-left: 66px;
+  padding-left: 10px;
+}
+
+@media screen and (max-width: 922px) {
+  .cont-one{
+    width: auto;
+  }
+  .cont-two{
+    width: auto;
+  }
+
 }
